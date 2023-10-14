@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.blackfur.arsnouveautweak.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "arsnouveautweak.refmap.json",
+  "mixins": [
+    "PickupAmethystGoalMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
