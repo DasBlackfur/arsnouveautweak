@@ -13,15 +13,16 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(PickupAmethystGoal.class)
 public class PickupAmethystGoalMixin {
 
-    @Shadow
+    @Shadow(
+            remap = false
+    )
     public AmethystGolem golem;
     @Redirect(
             method = "collectStacks",
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/tags/TagKey;)Z"
-            ),
-            remap = false
+            )
     )
     public boolean addCheck(ItemStack i, TagKey<Item> tagKey) {
         return (golem.getHeldStack().isEmpty() || i.getItem() == golem.getHeldStack().getItem()) && i.is(tagKey);

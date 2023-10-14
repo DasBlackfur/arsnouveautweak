@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "me.blackfur.arsnouveautweak.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "arsnouveautweak.refmap.json",
+  "refmap": "ars_nouveau_tweak.refmap.json",
   "mixins": [
     "PickupAmethystGoalMixin"
   ],
